@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Waterflame - Ricochet love.ogg-8a78db5bfa20be566a4899ba43597465.oggstr"
+
+[deps]
+
+source_file="res://Assets/Waterflame - Ricochet love.ogg"
+dest_files=[ "res://.import/Waterflame - Ricochet love.ogg-8a78db5bfa20be566a4899ba43597465.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

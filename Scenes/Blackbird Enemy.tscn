@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Blackbird Enemy.gd" type="Script" id=1]
+[ext_resource path="res://Assets/bird_2_black.png" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Blackbird Enemy" type="RigidBody2D"]
+position = Vector2( 0, -8 )
+collision_layer = 4
+collision_mask = 3
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+can_sleep = false
+linear_damp = 0.0
+angular_damp = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -2.86249, 0.0555115 )
+scale = Vector2( 1.75, 1.75 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -3.21625, 0.115112 )
+scale = Vector2( 1.75, 1.75 )
+polygon = PoolVector2Array( -11.9637, 1.72508, -9.93884, -4.43053, -4.18823, -4.7545, -1.92035, -8.15628, 5.07788, -7.65588, 9.12372, -6.50641, 9.74457, -3.34813, 9.01392, -1.43372, 10.8215, -0.745529, 11.1805, 2.84427, 10.8215, 6.88278, 4.71887, 6.25458, 2.565, 6.88278, -3.53766, 11.1008, -9.46008, 9.34496, -9.55054, 6.25458, -9.93884, 2.85901 )
