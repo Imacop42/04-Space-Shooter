@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/420674__sypherzent__deep-cut-slash-gash.wav-1c4575a5867a78447c297db6406440f1.sample"
+
+[deps]
+
+source_file="res://Assets/420674__sypherzent__deep-cut-slash-gash.wav"
+dest_files=[ "res://.import/420674__sypherzent__deep-cut-slash-gash.wav-1c4575a5867a78447c297db6406440f1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/bird_1_bluejay.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Sparrow Enemy.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Sparrow Enemy" type="RigidBody2D"]
+position = Vector2( 400, 104.285 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.252319, -1.94566 )
+scale = Vector2( 1.75, 1.75 )
+frames = SubResource( 4 )
+frame = 2
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -319.599, -73.3222 )
+polygon = PoolVector2Array( 310.684, 81.6981, 310.256, 77.4262, 306.981, 75.2903, 302.425, 73.7239, 301.566, 70.3652, 303.279, 64.3258, 306.127, 60.7659, 313.674, 60.1963, 313.959, 58.2027, 317.661, 52.3645, 323.357, 53.0765, 326.347, 56.6364, 327.914, 65.0378, 331.758, 65.6073, 340.729, 59.9115, 339.59, 80.4165, 328.341, 75.5751, 328.341, 81.9829, 314.386, 88.6755, 310.826, 85.1156 )

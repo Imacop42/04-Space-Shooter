@@ -9,7 +9,7 @@ export var acceleration = 0.1
 var velocity = Vector2(0,0)
 
 onready var VP = get_viewport_rect().size
-
+onready var Strike = load("res://Scenes/Strike.tscn")
 onready var Bullet_R = load("res://Scenes/Bullet_R.tscn")
 
 signal health_changed
@@ -30,7 +30,12 @@ func change_health(h):
 	if health <= 0:
 		die()
 func die():
+	var strike = Strike.instance()
+	strike.position = position
+	strike.get_node("Sprite").playing = true
+	get_node("/root/Game/Strikes").add_child(strike)
 	queue_free()
+	get_tree().change_scene("res://Scenes/GAMEOVER.tscn")
 
 
 
@@ -68,6 +73,7 @@ func _physics_process(delta):
 	if position.y > VP.y - margin:
 		velocity.y = 0
 		position.y = VP.y - margin
+	
 	
 	
 	

@@ -10,7 +10,7 @@ func _physics_process(delta):
 	var colliding = get_colliding_bodies()
 	for c in colliding:
 		if c.get_parent().name == "Enemies":
-			#player.change_score(c.score)
+			player.change_score(c.score)
 			queue_free()
 			
 	if position.x > 1032:

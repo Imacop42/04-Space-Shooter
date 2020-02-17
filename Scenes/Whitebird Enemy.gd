@@ -2,10 +2,10 @@ extends RigidBody2D
 
 
 var velocity = Vector2(0,0)
-export var min_speed = 150
-export var max_speed = 250
-export var damage = 10
-export var score = 10
+export var min_speed = 200
+export var max_speed = 300
+export var damage = 20
+export var score = 25
 
 onready var Strike = load("res://Scenes/Strike.tscn")
 

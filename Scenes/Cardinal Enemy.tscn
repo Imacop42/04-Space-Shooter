@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/bird_2_cardinal.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Cardinal Enemy.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Cardinal Enemy" type="RigidBody2D"]
+position = Vector2( 1057.41, -9.36414 )
+collision_layer = 4
+collision_mask = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+frame = 2
+speed_scale = 1.75
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -12.0584, 2.58344, -11.3232, -0.0943642, -8.99675, -4.03688, -5.3858, -6.03173, -3.53862, -5.10814, -2.47358, -8.31438, 2.99722, -11.0279, 6.54229, -6.65126, 6.32346, -3.54385, 6.20854, -0.841568, 7.68022, -1.18047, 9.25971, -1.21587, 11.1668, -0.951752, 10.3812, 2.61044, 11.6347, 4.25971, 10.7111, 6.04092, 8.33166, 6.99478, 7.08432, 7.20267, 5.30146, 6.23883, 5.32707, 7.20181, 0.47998, 7.73381, -2.80151, 9.32486, -6.58026, 8.62877, -8.17133, 5.94388, -7.67413, 4.35283 )

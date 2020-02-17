@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _ready():
-	pass
+	get_node("/root/Game/Claw")
 
 
 
