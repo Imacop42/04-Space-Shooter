@@ -1,5 +1,6 @@
 # Bird of Prey
 Bird of Prey is a horizontal shooter game, created for my class MSCH-C220, where you control an eagle with laser eyes. Your goal is to shoot the other birds that appear, with each kill giving you points.
+
 Blackbirds are the largest and generally the slowest, and are worth the least ammount of points.
 Bluejays are the second largest and of a medium speed, and are worth more points than the Blackbirds.
 The white birds are the second smallest and generally swift, and are worth more points than Bluejays.
