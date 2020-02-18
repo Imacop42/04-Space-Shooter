@@ -13,6 +13,6 @@ Running into the birds will kill them, but grant you no points and lower your he
 
 
 
-The soundtrack is Ricochet Love, by Waterflame.
+The soundtrack is the song "Ricochet Love" by Waterflame.
 
 
